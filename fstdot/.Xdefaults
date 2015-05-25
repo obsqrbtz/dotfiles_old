@@ -13,23 +13,39 @@ urxvt*boldMode: false
 rxvt.scrollBar_floating: true
 urxvt.scrollBar_right: true
 
-*background:	#333333
-*foreground:	#b3b8c4
+! Taken from dotshare.it
+*background: #202020
+*foreground: #f8f8f8
+*cursorColor: #a0a0a0
 
-*color0:	#3e4853
-*color1:	#b06a58
-*color2:	#95b47b
-*color3:	#e5c078
-*color4:	#58698c
-*color5:	#7b5e8d
-*color6:	#82a1b2
-*color7:	#cccaca
+!black
+*color0: #404040
+*color8: #606060
 
-*color8:	#525c67
-*color9:	#ba7e6c
-*color10:	#a9c88f
-*color11:	#f9d48c
-*color12:	#6c7da0
-*color13:	#8f72a1
-*color14:	#96b5c6
-*color15:	#e0dede
+!red
+*color1: #997766
+*color9: #bb9988
+
+!green
+*color2: #889977
+*color10: #aabb99
+
+!yellow
+*color3: #bbaa88
+*color11: #ddccaa
+
+!blue
+*color4: #444466
+*color12: #666688
+
+!magenta
+*color5: #775566
+*color13: #997788
+
+!cyan
+*color6: #558877
+*color14: #77aa99
+
+!white
+*color7: #d6d6d6
+*color15: #f8f8f8
