@@ -1,0 +1,5 @@
+#!/bin/sh
+
+BG='#333333'
+FG='#F8CAA6'
+conky | dzen2 -h '22' -ta l -bg $BG -fg $FG 

@@ -1,0 +1,19 @@
+out_to_x no
+out_to_console yes
+background false
+update_interval 1.0
+total_run_times 0
+double_buffer yes
+use_spacer none
+use_xft yes
+minimum_size 1024
+maximum_width 1024
+
+
+TEXT
+^bg(\#6B5A59)  ^bg() ^bg(\#F8CAA6) ^bg() ${time %H:%M DAY:%d} | \
+RAM: $memperc% | \
+^fg(\#FDF1DB)${exec mocp -Q %artist} - ${exec mocp -Q %song}^fg() | \
+CPU: ${cpu}% | \
+FREE: ${fs_free /} | \
+USED: ${fs_used /}
