@@ -59,5 +59,7 @@ pk () {
  else
  echo "'$1' is not a valid file"
  fi
+} 
 
-}   
+ alias killme='pkill -u -9 obscuer' 
+ alias mt='sudo udevil mount  /dev/sdc2' 
