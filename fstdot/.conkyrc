@@ -11,9 +11,10 @@ maximum_width 1024
 
 
 TEXT
-^bg(\#6B5A59)  ^bg() ^bg(\#F8CAA6) ^bg() ${time %H:%M DAY:%d} | \
-RAM: $memperc% | \
-^fg(\#FDF1DB)${exec mocp -Q %artist} - ${exec mocp -Q %song}^fg() | \
-CPU: ${cpu}% | \
-FREE: ${fs_free /} | \
-USED: ${fs_used /}
+^bg(\#6B5A59)  ^fg(\#ffffff)^i(/home/obscuer/tbicons/dzen2/fs_02.xbm) oldie^fg() ^bg() ^bg(\#F8CAA6) ^bg() ^i(/home/obscuer/tbicons/dzen2/clock.xbm) ${time %H:%M DAY:%d} | \
+^fg(\#FDF1DB)^i(/home/obscuer/tbicons/dzen2/note.xbm) $mpd_artist - $mpd_title  $mpd_elapsed/$mpd_length^fg() | \
+^i(/home/obscuer/tbicons/dzen2/mem.xbm) RAM: $memperc% | \
+^i(/home/obscuer/tbicons/dzen2/cpu.xbm) CPU: ${cpu}% | \
+^i(/home/obscuer/tbicons/dzen2/diskette.xbm) FREE: ${fs_free /} | \
+^i(/home/obscuer/tbicons/dzen2/diskette.xbm) USED: ${fs_used /} | \
+^i(/home/obscuer/tbicons/dzen2/wifi_02.xbm) WIFI: ${wireless_link_qual ra0}% 
