@@ -13,7 +13,6 @@ urxvt*boldMode: false
 rxvt.scrollBar_floating: true
 urxvt.scrollBar_right: true
 
-! Taken from dotshare.it
 *background: #202020
 *foreground: #f8f8f8
 *cursorColor: #a0a0a0
@@ -23,29 +22,30 @@ urxvt.scrollBar_right: true
 *color8: #606060
 
 !red
-*color1: #997766
-*color9: #bb9988
+*color1:   #aabb99
+*color9: #889977
+
 
 !green
-*color2: #889977
-*color10: #aabb99
+*color2:   #C66F6F
+*color10: #A44D4D 
 
 !yellow
-*color3: #bbaa88
-*color11: #ddccaa
+*color3:   #ddccaa
+*color11: #bbaa88
 
 !blue
-*color4: #444466
-*color12: #666688
+*color4:   #7C98C2
+*color12: #667D9F
 
 !magenta
-*color5: #775566
-*color13: #997788
+*color5: #bb9988
+*color13: #997766
 
 !cyan
-*color6: #558877
-*color14: #77aa99
+*color6:   #F4F0ED
+*color14: #B5ACA2
 
 !white
-*color7: #d6d6d6
-*color15: #f8f8f8
+*color7:    #f8f8f8
+*color15: #d6d6d6
