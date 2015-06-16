@@ -1,0 +1,38 @@
+mpd_music_dir = "/media/lToshiba/music/" 
+# Format
+
+   song_list_format = " $4• $8%t"
+   song_status_format = " $3%t $0 "
+   song_window_title_format = "%t"
+   now_playing_prefix = "$2 >>"
+   now_playing_suffix = ""
+   progressbar_look = "---"
+   browser_playlist_prefix = " $2 ♥ $0 "
+
+ # Colors
+
+   colors_enabled = "yes"
+   statusbar_color = "black"
+   empty_tag_color = "red"
+   main_window_color = "magenta" 
+
+ # Misc
+   
+   display_bitrate = "yes"
+   autocenter_mode = "yes"
+   centered_cursor = "yes"
+   titles_visibility = "yes"
+   statusbar_visibility = "yes"
+   empty_tag_marker=" -- ‼ -- "
+ # ---   
+   mouse_support = "no"
+   header_visibility = "no"
+   display_remaining_time = "no"
+   display_screens_numbers_on_start = "no"
+   discard_colors_if_item_is_selected = "no"
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_in_stereo = no
+visualizer_type = spectrum
+visualizer_look = ▋▋
+visualizer_color = 36,37,38,39,40

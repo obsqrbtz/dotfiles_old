@@ -1,0 +1,50 @@
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+dzen2.font: PragmataPro for Powerline:size=7
+
+URxvt*font: xft:PragmataPro for Powerline:size=8
+URxvt*boldFont: xft:PragmataPro for Powerline:size=8;style=bold
+urxvt*scrollBar: false
+urxvt*boldMode: false
+rxvt.scrollBar_floating: true
+urxvt.scrollBar_right: true
+
+*background: #2D2D2D
+*foreground: #f8f8f8
+*cursorColor: #a0a0a0
+
+!black
+*color0: #404040
+*color8: #606060
+
+!red
+*color1: #99C99D
+*color9: #739675
+
+!green
+*color2:   #FF8080
+*color10: #BF6060
+
+!yellow
+*color3:   #97AFCC
+*color11: #768AA1
+
+!blue
+*color4:   #ddccaa
+*color12: #bbaa88
+
+!magenta
+*color5: #BBA588
+*color13: #94836C
+
+!cyan
+*color6:   #F4F0ED
+*color14: #B5ACA2
+
+!white
+*color7:    #f8f8f8
+*color15: #d6d6d6

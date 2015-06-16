@@ -1,0 +1,79 @@
+#!/bin/bash
+
+FONT="-*-drift-*-*-*-*-10-*-*-*-*-*-*-*"
+IF="Master"         	# Audio Channel
+SECS="5"            	# Display Timeout
+
+BG="#2D2D2D"       	# Background color of window
+FG="#B5B5B5"        	# Volume Icon Normal Color
+FG_dull="#B5B5B5"		# Volume Icon mute color
+BAR_FG="#B5B5B5"    	# Volume bar fill color
+BAR_BG="#1C1C1C"    	# Volume bar normal color
+
+XPOS="800"         	# Horizontal position
+YPOS="700"          	# Vertical position
+HEIGHT="40"         	# Window Height
+WIDTH="200"         	# Window Width
+BAR_WIDTH="130"     	# Volume bar width
+
+
+# Don't change this
+PIPE="/tmp/dvolpipe"
+
+err() {
+  echo "$1"
+  exit 1
+}
+
+usage() {
+  echo "usage: dvol [option] [argument]"
+  echo
+  echo "Options:"
+  echo "     -i, --increase - increase volume by \`argument'"
+  echo "     -d, --decrease - decrease volume by \`argument'"
+  echo "     -t, --toggle   - toggle mute on and off"
+  echo "     -h, --help     - display this"
+  exit
+}
+
+
+# Parcing Arguments
+case "$1" in
+  '-i'|'--increase')
+			[ -z "$2" ] && err "No argument specified for increase."
+			[ -n "$(tr -d [0-9] <<<$2)" ] && err "The argument needs to be an integer."
+		AMIXARG="${2}%+"
+    ;;
+  '-d'|'--decrease')
+			[ -z "$2" ] && err "No argument specified for decrease."
+			[ -n "$(tr -d [0-9] <<<$2)" ] && err "The argument needs to be an integer."
+		AMIXARG="${2}%-"
+    ;;
+  '-t'|'--toggle')
+		AMIXARG="toggle"
+    ;;
+  ''|'-h'|'--help')
+		usage
+    ;;
+  *)
+		err "Unrecognized option"
+    ;;
+esac
+
+# Actual volume changing (readability low)
+AMIXOUT="$(amixer set "$IF" "$AMIXARG" | tail -n 1)"
+MUTE="$(cut -d '[' -f 4 <<<"$AMIXOUT")"
+VOL="$(cut -d '[' -f 2 <<<"$AMIXOUT" | sed 's/%.*//g')"
+if [ "$MUTE" = "off]" ]; then
+  FG="$FG_dull"
+fi
+
+
+if [ ! -e "$PIPE" ]; then
+  mkfifo "$PIPE"
+  (dzen2 -tw "$WIDTH" -h "$HEIGHT" -x "$XPOS" -y "$YPOS" -fn "$FONT" -bg "$BG" -fg "$FG" -ta left < "$PIPE"
+   rm -f "$PIPE") &
+fi
+
+# Feed into the pipe
+(echo "$VOL" | dzen2-gdbar -l "   û   " -fg "$BAR_FG" -bg "$BAR_BG" -w "$BAR_WIDTH" -h "2" ; sleep "$SECS") > "$PIPE"
