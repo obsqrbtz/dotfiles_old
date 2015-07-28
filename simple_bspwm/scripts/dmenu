@@ -1,2 +1,0 @@
-#!/bin/sh
-dmenu_run   -i -p "Run >" -l 4 -w 320 -h 20 -x 18 -y 40  -nf '#B5B5B5' -nb '#2D2D2D' -sb '#585055' -fn 'PragmataPro for Powerline-8' 

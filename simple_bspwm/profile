@@ -1,5 +1,0 @@
-#add to /etc/profile
-export PANEL_FIFO="/tmp/panel-fifo"
-export PATH=$PATH:/home/obscuer/scripts
-PANEL_HEIGHT=24
-export PANEL_FIFO PANEL_HEIGHT PANEL_FONT_FAMILY			
