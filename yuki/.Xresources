@@ -1,0 +1,54 @@
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+dzen2.font: PragmataPro for Powerline:size=7
+URxvt*font: -artwiz-lime-medium-r-normal--10-110-75-75-m-50-iso10646-1
+URxvt*boldFont: -artwiz-lime-medium-r-normal--10-110-75-75-m-50-iso10646-1
+!URxvt*font: xft:PragmataPro for Powerline:size=7
+!URxvt*boldFont: xft:PragmataPro for Powerline:size=7;style=bold
+urxvt*scrollBar: false
+urxvt*boldMode: false
+rxvt.scrollBar_floating: true
+urxvt.scrollBar_right: true
+
+! special
+*.foreground:   #e1e1e1
+*.background:   #2a2e35
+*.cursorColor:  #e1e1e1
+
+! black
+*.color0:       #5a5a5a
+*.color8:       #8c8c8c
+
+! red
+*.color1:	#de8990
+*.color9:	#d0a8ab
+
+! green
+*.color2:	#94daa9
+*.color10:	#bae8d2
+
+! yellow
+*.color3:	#dee7aa
+*.color11:	#d7c96b
+
+! blue
+*.color4:	#9cdbdf
+*.color12:	#6cb4dd
+
+! magenta
+*.color5:	#cca8c9
+*.color13:	#db79bf
+
+! cyan
+*.color6:	#9ad4c8
+*.color14:	#59b0b2
+
+! white
+*.color7:	#e1e1e1
+*.color15:	#f0f0f0
+
+

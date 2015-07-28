@@ -1,0 +1,32 @@
+rename .Xresources
+rename sxhkd
+rename .xinitrc(old)
+open_with nano
+unrar
+shell unrar f
+shell unpack200 
+open_with unrar
+open_with xarchiver
+open_with 
+mark
+open_with q
+mkdir themes
+cd usr/share/themes
+rename options.py
+rename rc.conf
+rename bspwmr
+mkdir colorschemes
+
+rename butter.py
+cd scripts
+cd dotfiles/
+delete 
+set column_ratios 12
+set column_ratios 1 1
+set column_ratios 1 2
+shell 
+set dirname_in_tabs true
+rename .adobe
+set draw_borders true
+find bf
+hell 
