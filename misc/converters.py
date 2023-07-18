@@ -39,15 +39,25 @@ def f68_to_hex(num):
     exp &= 0x7FFFFFFF
     return hex(sign | exp | mantissa)
 
+def hex_to_float(num):
+    int_num = int(num, 0)
+    cp = pointer(c_int(int_num))
+    fp = cast(cp, POINTER(c_float))
+    return fp.contents.value
+
 match sys.argv[1]:
     case "hex_to_f68":
         print(hex_to_f68(sys.argv[2]))
+    case "hex_to_float":
+        print(hex_to_float(sys.argv[2]))
     case "hex_to_int":
         print(int(sys.argv[2], 0))
     case "hex_to_ascii":
         print(bytes.fromhex(sys.argv[2][2:len(sys.argv[2])]).decode())
     case "f68_to_hex":
         print(f68_to_hex(sys.argv[2]))
+    case "float_to_hex":
+        print(hex(float(sys.argv[2])))
     case "int_to_hex":
         print(hex(int(sys.argv[2])))
     case "ascii_to_hex":
