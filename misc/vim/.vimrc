@@ -65,34 +65,33 @@ set wildmode=list:longest
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
-
-" Theme
-colo molokai
-
 " PLUGINS ---------------------------------------------------------------- {{{
 
 call plug#begin('~/.vim/plugged')
-
   Plug 'dense-analysis/ale'
-
   Plug 'preservim/nerdtree'
-
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-
   Plug 'NLKNguyen/papercolor-theme'
-
-   Plug 'itchyny/lightline.vim'
-
+  Plug 'itchyny/lightline.vim'
+  Plug 'dracula/vim',{'as':'dracula'}
 call plug#end()
 
 " }}}
+
+let g:dracula_colorterm = 0
+let g:dracula_italic = 0
+colorscheme dracula
+
+let g:lightline = {
+      \ 'colorscheme': 'dracula',
+      \ }
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
 " Mappings code goes here.
 
 " }}}
-
+map <F3> :NERDTreeToggle<CR>
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
@@ -102,7 +101,8 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
-
+autocmd vimenter * NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
 " More Vimscripts code goes here.
 
 " }}}

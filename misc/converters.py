@@ -19,7 +19,7 @@ def hex_to_f68(hexnum):
         power = pow(2, 104 - exponent)
     return(sign * mantissa * power)
 
-#TODO: handle negatives properly
+#Does not handle negatives properly
 def f68_to_hex(num):
     f = float(num)
     num = cast(pointer(c_float(f)), POINTER(c_int32)).contents.value
@@ -31,7 +31,7 @@ def f68_to_hex(num):
             mantissa = ((num & 0x7FFFFF) >> 1) | 0b10000000000000000000000
         else:
             exp = (~(num >> 23 & 0xFF) - 2) << 23
-            mantissa = (~num & 0x7FFFFF) + 1
+            mantissa = ((~num & 0x7FFFFF) + 1)
             mantissa >>= 1
     else:
         exp = 0
