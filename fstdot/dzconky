@@ -1,6 +1,0 @@
-#!/bin/sh
-
-BG='#333333'
-FG='#F8CAA6'
-xrdb -load ~/.Xdefaults
-conky | dzen2 -h '22' -w '900' -ta l -bg $BG -fg $FG 
